@@ -107,5 +107,3 @@ public void testAddRoomDuplicateNumberThrowsException() throws InvalidBookingExc
 
 📁 **Test File Path:**  
 `Main/test/main/HotelSystemTest.java`
-
-
