@@ -11,19 +11,22 @@ A hotel booking management system built using Java, JavaFX, and object-oriented 
 - **Room Management**
   - Supports Single, Double, Suite rooms
   - Each room has a number, price per night, and availability
+
   - Admins can add new rooms with validation (no duplicates)
+
 
 - **User Management**
   - Customers can register and log in
-  - Admin login with a separate view and privileges
+  - Admin login with a separate view and privileges      
 
 - **Booking System**
   - Customers can book rooms for a date range
   - Supports discount codes (offers)
   - Prevents:
+
     - Duplicate bookings
     - Check-in on past dates
-    - Same-day check-in and check-out
+    - Same-day check-in and check-out (not allowed if same date)
 
 - **Offers**
   - Admins can define offers like `SUMMER10` and `WINTER20`
@@ -79,13 +82,15 @@ The project includes a complete suite of unit tests for `HotelSystem` functional
 - ✅ Adding new rooms and avoiding duplicates  
 - ✅ Offer listing  
 - ✅ Current user tracking  
+- ✅ Checking  
+ 
 
 ### 🔬 Sample Test Case
 
 ```java
 @Test(expected = InvalidBookingException.class)
 public void testAddRoomDuplicateNumberThrowsException() throws InvalidBookingException {
-    Room duplicateRoom = new SingleRoom(101, 300); // Room 101 already exists
+    Room duplicateRoom = new SingleRoom(101, 300); // Room 101 already exists 
     hotelSystem.addRoom(duplicateRoom);
 }
 ```
